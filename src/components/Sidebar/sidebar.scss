@@ -1,0 +1,30 @@
+.SideBar{
+    width: 320px;
+    min-width: 320px;
+    border-right: 1px solid #ccc;
+    padding: 25px;
+}
+.logo{
+    margin-bottom: 25px;
+    a{
+        font-size: 30px;
+        
+    }
+}
+.desciption{
+    font-size: 18px;
+    line-height: 1.7;
+    color: #999;
+    margin-bottom: 25px;
+}
+.menu{
+    ul{
+        li{
+            a{
+                display: block;
+                font-weight: 600;
+                color: #333;
+            }
+        }
+    }
+}
