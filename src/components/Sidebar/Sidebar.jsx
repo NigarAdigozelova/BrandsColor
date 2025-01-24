@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./sidebar.scss";
 import Modal from "react-modal";
+import { IoMdClose } from "react-icons/io";
+
 
 const Sidebar = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -35,18 +37,19 @@ const Sidebar = () => {
           </ul>
         </div>
       </aside>
-      <Modal isOpen={modalIsOpen} onRequestClose={toggleModal}>
-        <button onClick={toggleModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={toggleModal}
+        className="about-modal"
+        overlayClassName="about-modal-overlay"
+      >
+        <button onClick={toggleModal} className="modal-close-btn"><IoMdClose /></button>
+        <h3>About BrandColors</h3>
+        <p>BrandColors was created by <b>DesignBombs</b>. The goal was to create a helpful reference for the brand color codes that are needed most often.</p>
+
+        <br />
+        <p>It's been featured by Smashing Magazine, CSS-Tricks, Web Design Depot, Tuts+, and over <b>2 million pageviews</b> . There are now over <b>600 brands</b> with <b>1600 colors</b> and the collection is always growing.</p>
       </Modal>
-      
     </div>
   );
 };

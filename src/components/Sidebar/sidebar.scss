@@ -27,4 +27,62 @@
             }
         }
     }
+    cursor: pointer;
+    :hover{
+        color: #0099e5;
+    }
+}
+.about-modal{
+    max-width: 720px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(#000, .1);
+    padding: 50px;
+    position: relative;
+    
+
+    h3{
+        margin-bottom: 25px;
+        font-size: 26px
+    }
+    .modal-close-btn{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #f1eded;
+        width: 30px;
+        height: 30px;
+        border-radius: none;
+        cursor: pointer;
+        
+        
+
+        svg{
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            bottom: 5px;
+            right: 4px;
+            // text-align: center;
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            
+        }
+
+
+    }
+    
+
+}
+.about-modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(#fff, .8);
+
 }
