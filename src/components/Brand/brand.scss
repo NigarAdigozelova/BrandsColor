@@ -1,0 +1,35 @@
+.brand {
+  padding: 15px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  &.selected {
+    .brands-color {
+      span {
+        flex: 1;
+        text-indent: 0;
+      }
+    }
+  }
+  h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .brands-color {
+    display: flex;
+    span {
+      background: var(--bgColor);
+      // flex: 1;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--textColor);
+      text-indent: -999999px;
+      width: 60px;
+    }
+  }
+}

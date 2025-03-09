@@ -1,0 +1,21 @@
+.heroPage {
+  flex: 1 1 auto !important;
+  overflow: auto;
+  background-color: #f8f8f8;
+  width: 100%; /* Ensure it takes the full width */
+  min-height: 100vh;
+
+  header {
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section {
+    padding: 25px;
+  }
+}
