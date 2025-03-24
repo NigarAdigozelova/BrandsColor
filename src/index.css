@@ -53,6 +53,20 @@ body {
       color: #000;
       
     }
+    select{
+      margin-right: 7px;
+      height: 30px;
+      padding: 0 15px;
+      background-color: #eee;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-right: 5px;  
+      appearance: none;
+      border: 1px solid #ddd;
+      text-align: center;
+      
+      
+    }
     
   }
   .selected {
@@ -62,6 +76,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     svg {
       font-size: 16px;
       padding-top: 3px;
@@ -70,4 +85,21 @@ body {
       margin-right: 2px;
     }
   }
+}
+.back{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  color: #5c5b5b;
+
+    svg{
+      display: block;
+      font-size: 16px;
+      padding-top: 3px;
+      display: block;
+      margin-right: 2px;
+    }
+  
 }

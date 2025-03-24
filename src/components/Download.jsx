@@ -3,6 +3,7 @@ import MainContext from "../MainContext";
 import { IoMdClose } from "react-icons/io";
 import { IoMdDownload } from "react-icons/io";
 import { HiLink } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Download = () => {
   const { selectedBrands, brands, setSelectedBrands } = useContext(MainContext);
@@ -58,27 +59,28 @@ const Download = () => {
       };
     }
   }, [selectedBrands, cssMethod]);
-  const getLink = () => {
-    prompt(
-      "Here's the URL to share",
-      `http://localhost:3000/collection/${selectedBrands.join(",")}`
-    );
-  };
+  // const getLink = () => {
+  //   prompt(
+  //     "Here's the URL to share",
+  //     `http://localhost:3000/collection/${selectedBrands.join(",")}`
+  //   );
+  // };
 
   return (
     <div className="download">
       <div className="actions">
-        <a download={`brands.${cssMethod}`} href={donwloadUrl}>
-          <IoMdDownload />
-        </a>
         <select onChange={(e) => setCssMethod(e.target.value)}>
           <option value="css">CSS</option>
           <option value="scss">SCSS</option>
           <option value="less">LESS</option>
         </select>
-        <button onClick={getLink}>
+        <a download={`brands.${cssMethod}`} href={donwloadUrl}>
+          <IoMdDownload />
+        </a>
+
+        <Link to={`/collection/${selectedBrands.join(",")}`}>
           <HiLink />
-        </button>
+        </Link>
       </div>
       <div
         className="selected"

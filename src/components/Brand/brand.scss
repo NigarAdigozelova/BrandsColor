@@ -5,6 +5,9 @@
   margin-bottom: 10px;
   cursor: pointer;
   &.selected {
+    border: 1px solid #c91e1e;
+
+
     .brands-color {
       span {
         flex: 1;

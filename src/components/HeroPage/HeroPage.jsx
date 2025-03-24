@@ -13,12 +13,12 @@ const {brands,selectedBrands}=useContext(MainContext)
     <div className="heroPage">
       <header>
         <Search />
-        <Download/>
+        {selectedBrands.length !== 0 && <Download/>}
       </header>
       <section className="brands">
         {brands.map(brand =>(
           <LazyLoad once={true} overflow={true} placeholder={"Loading..."}>
-          <Brand brand={brand}/>
+          <Brand key={brand.id} brand={brand}/>
           </LazyLoad>
         ))}
 
